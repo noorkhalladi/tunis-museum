@@ -1,0 +1,61 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+appwelcome:
+    path: /
+    controller: App\Controller\HomeController::index
+
+home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+museums:
+    path: /museums
+    controller: App\Controller\PageController::museums
+
+milestones:
+    path: /milestones
+    controller: App\Controller\PageController::milestones
+
+sites:
+    path: /sites
+    controller: App\Controller\PageController::sites
+
+gallery1:
+    path: /gallery1
+    controller: App\Controller\Gallery1Controller::bardo
+
+gallery2:
+    path: /gallery2
+    controller: App\Controller\Gallery2Controller::carthage
+
+gallery3:
+    path: /gallery3
+    controller: App\Controller\Gallery3Controller::garden
+
+gallery4:
+    path: /gallery4
+    controller: App\Controller\Gallery4Controller::baths
+
+video1:
+    path: /video1
+    controller: App\Controller\Video1Controller::vbardo
+
+video2:
+    path: /video2
+    controller: App\Controller\Video2Controller::vcarthage
+
+video3:
+    path: /video3
+    controller: App\Controller\Video3Controller::vgarden
+
+video4:
+    path: /video4
+    controller: App\Controller\Video4Controller::vbaths
+
+article:
+    path: /article
+    controller: App\Controller\ArticleController::article

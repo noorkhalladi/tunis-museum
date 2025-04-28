@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+{% block head %}
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+
+
+
+{% endblock %}
+
+{% block body %}
+  <style>
+     body {
+        
+            min-height: 200vh;
+            position: relative;
+        
+       
+        
+    }
+
+
+    </style>
+      <div class="container mt-4"> <!-- Adjust top margin -->
+          <!-- Bootstrap Breadcrumb Row -->
+        <div class="row">
+            <div class="col-md-5 offset-md-8">
+                <nav aria-label="breadcrumb" style=" direction: rtl;  padding: 10px;">
+                    <ol class="breadcrumb" style="margin: 20; padding: 20; background-color: transparent;"> <!-- Remove background color -->
+                        <li class="breadcrumb-item"><a href="/"><i class="fas fa-home" style="color: #007bff;"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page" style="color: #6c757d;">متاحف</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+<div class="container mt-4">
+    <div class="row">
+        <!-- Second Column -->
+        <div class="col-md-6 text-right">
+            <h2>فيديوهات</h2>
+            <div class="row mt-4">
+                <div class="col-md-6 position-relative">
+                  <div class="position-relative">
+                    <img src="{{ asset('images/bardo/bardo8.jpg') }}" class="img-fluid" alt="Image 1">
+                      <div class="overlay-text ">
+                        <a href="{{ path('video1') }}"> شاهد المزيد من فيديوهات متحف باردو</a>                  
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-6 position-relative">
+                  <div class="position-relative">
+                    <img src="{{ asset('images/carthage/carthage44.jpg') }}" class="img-fluid" alt="Image 1">
+                      <div class="overlay-text ">
+                        <a href="{{ path('video2') }}">شاهد المزيد من فيديوهات متحف قرطاج</a>                  
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- First Column -->
+        <div class="col-md-6 text-right">
+            <h2>صور</h2>
+            <div class="row mt-4">
+                <div class="col-md-6 position-relative">
+                  <div class="position-relative">
+                    <img src="{{ asset('images/bardo/bardo7.jpg') }}" class="img-fluid" alt="Image 1">
+                      <div class="overlay-text ">
+                        <a href="{{ path('gallery1') }}">شاهد المزيد من صور متحف باردو </a>                  
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-6 position-relative">
+                  <div class="position-relative">
+                    <img src="{{ asset('images/carthage/carthage51.jpg') }}" class="img-fluid" alt="Image 1">
+                      <div class="overlay-text ">
+                        <a href="{{ path('gallery2') }}">شاهد المزيد من صور متحف قرطاج</a>                  
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+   </div>
+</div>
+
+
+
+
+    
+{% endblock %}

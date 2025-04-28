@@ -1,0 +1,499 @@
+{% extends 'base.html.twig' %}
+{% block head %}
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles.css">
+
+
+
+
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    
+
+
+
+{% endblock %}
+
+{% block body %}
+  <style>
+     body {
+        
+            min-height: 2110vh;
+            position: relative;
+         }
+       .modal-lg {
+    max-width: 100%;
+}
+.modal-dialog {
+  max-width: 90vw; /* Adjust the maximum width of the modal */
+  margin: 0 auto;
+  
+}
+.modal-content {
+  background-color: rgba(239, 188, 155, 0.4); /* Adjust the transparency by changing the last value (0.8) */
+  border: none; /* Optional: Remove border */
+  box-shadow: none; /* Optional: Remove box shadow */
+}
+
+.modal-body {
+  text-align: center;
+ padding: 0;
+}
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.1); /* Adjust the transparency by changing the last value (0.5) */
+}
+.modal-image {
+  max-width: 100%;
+  max-height: 80vh; /* Adjust the maximum height of the modal image */
+}
+
+.text-right {
+    direction: rtl;
+}
+
+.row {
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+.main-header {
+    background-color: #f0f0f0; /* Light gray background color */
+    padding: 20px;
+    border-bottom: 2px solid #ccc; /* Gray border at the bottom */
+}
+
+.content-row {
+    background-color: #e9ecef; /* Light gray background color */
+    padding: 20px;
+    border-bottom: 1px solid #ccc; /* Light gray border at the bottom */
+}
+    </style>
+     <div class="container mt-4"> <!-- Adjust top margin -->
+          <!-- Bootstrap Breadcrumb Row -->
+        <div class="row">
+            <div class="col-md-5 offset-md-8">
+                <nav aria-label="breadcrumb" style=" direction: rtl;  padding: 10px;">
+                    <ol class="breadcrumb" style="margin: 20; padding: 20; background-color: transparent;"> <!-- Remove background color -->
+                        <li class="breadcrumb-item"><a href="/"><i class="fas fa-home" style="color: #007bff;"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page" style="color: #6c757d;">  فيديوهات متحف قرطاج</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+<div class="container">
+
+</div>
+     <div class="container-fluid">
+        <div class="row text-right main-header">
+            <!-- Main Content -->
+            
+                <!-- Text content in Arabic -->
+                <h1> صور متحف قرطاج</h1>
+        </div>
+        <div class="row text-right content-row">
+                <p>
+                <strong> المتحف الوطني بقرطاج </strong> هو متحف أثري تونسي يوجد على ربوة بيرصة بمدينة قرطاج ويعتبر أحد أهم متحفين أثريين تونسيين بعد متحف باردو وقد تأسس عام 1875
+يحتوي المتحف على مخلفات أثرية تعود إلى عدة عهود قديمة، من بينها ما يعود إلى الحضارة البونية من:
+قناديل زيتية
+مجموعة من الخزف الذي اكتشف بالمعابد و بتوفاة صلامبو
+قبور مرمرية تعود إلى القرن 3 ق.م      
+أدوات جنائزية مثل الأقنعة والحلي
+وما يعود إلى العهد الروماني: لوحات فسيفساء رومانية, تماثيل مختلفة
+العهد المسيحي والبيزنطي: لوحات فسيفسائية من بينها اللوحة المسماة سيدة قرطاج, نقائش جنائزية
+
+                </p>
+            </div>
+
+
+
+ <div class="row">
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage1.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage21.jpg') }}" alt="Image 2" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage51.jpg') }}" alt="Image 2" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage34.jpg') }}" alt="Image 2" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage35.jpg') }}" alt="Image 2" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage36.jpg') }}" alt="Image 2" class="img-thumbnail gallery-image">
+        </div>
+
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage3.jpg') }}" alt="Image 2" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage28.jpg') }}" alt="Image 2" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage43.jpg') }}" alt="Image 2" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage44.jpg') }}" alt="Image 2" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage46.jpg') }}" alt="Image 2" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage53.jpg') }}" alt="Image 2" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage58.jpg') }}" alt="Image 2" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage67.jpg') }}" alt="Image 2" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage68.jpg') }}" alt="Image 2" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage81.jpg') }}" alt="Image 2" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage83.jpg') }}" alt="Image 2" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage111.jpg') }}" alt="Image 2" class="img-thumbnail gallery-image">
+        </div>
+
+
+
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage5.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage6.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage7.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage9.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage10.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage11.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage12.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage13.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage14.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage16.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage18.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage20.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage22.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage23.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage25.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage26.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage27.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage29.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage31.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage32.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage33.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage38.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage40.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage41.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage42.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage45.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage47.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage48.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage49.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage50.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage52.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage54.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage55.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage56.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage59.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage60.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage61.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage62.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage64.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage69.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage72.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage73.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage74.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage75.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage80.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage82.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage84.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage85.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage88.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage89.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage91.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage97.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage98.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage100.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage102.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage105.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage108.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage110.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage114.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage116.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage139.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage121.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage122.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage124.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage126.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage128.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage131.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage132.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage136.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage137.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage117.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage8.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage19.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+       
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage71.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage77.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage78.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage79.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage87.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage99.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage92.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage96.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage112.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage113.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage123.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage129.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/carthage/carthage135.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+
+   
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body modal-lg">
+        <img src="" class="img-fluid modal-image" alt="Modal Image">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">غلق</button>
+        <button type="button" class="btn btn-primary" id="prevBtn">السابق</button>
+        <button type="button" class="btn btn-primary" id="nextBtn">التالي</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+    var images = $(".gallery-image");
+    var currentIndex = 0;
+
+    images.click(function(){
+        var imageUrl = $(this).attr('src');
+        $('.modal-image').attr('src', imageUrl);
+        $('#imageModal').modal('show');
+        console.log
+        currentIndex = images.index($(this));
+    });
+
+    $('#prevBtn').click(function(){
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        var imageUrl = images.eq(currentIndex).attr('src');
+        $('.modal-image').attr('src', imageUrl);
+    });
+
+    $('#nextBtn').click(function(){
+        currentIndex = (currentIndex + 1) % images.length;
+        var imageUrl = images.eq(currentIndex).attr('src');
+        $('.modal-image').attr('src', imageUrl);
+    });
+});
+</script>
+
+{% endblock %}

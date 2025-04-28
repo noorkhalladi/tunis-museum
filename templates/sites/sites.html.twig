@@ -1,0 +1,129 @@
+{% extends 'base.html.twig' %}
+{% block head %}
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+
+
+
+{% endblock %}
+
+{% block body %}
+  <style>
+     body {
+        
+            min-height: 200vh;
+            position: relative;
+        
+       
+        
+    }
+.img-container {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .img-container img {
+      max-width: 70%;
+      height: auto;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+    .img-container img.expanded {
+      width: 100%;
+      max-width: none;
+    }
+    .caption {
+      position: absolute;
+      bottom: 20px;
+      left: 150px;
+      align:right;
+      color: white;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    </style>
+    <div class="container mt-4"> <!-- Adjust top margin -->
+          <!-- Bootstrap Breadcrumb Row -->
+        <div class="row">
+            <div class="col-md-5 offset-md-8">
+                <nav aria-label="breadcrumb" style=" direction: rtl;  padding: 10px;">
+                    <ol class="breadcrumb" style="margin: 20; padding: 20; background-color: transparent;"> <!-- Remove background color -->
+                        <li class="breadcrumb-item"><a href="/"><i class="fas fa-home" style="color: #007bff;"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page" style="color: #6c757d;"> مواقع اثرية</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+       
+    <div class="container mt-4">
+       <div class="row">
+        <!-- Second Column -->
+          <div class="col-md-6 text-right">
+             <h2>فيديوهات</h2>
+               <div class="row mt-4">
+                 <div class="col-md-6 position-relative">
+                    <div class="position-relative">
+                      <img src="{{ asset('images/site/site28.jpg') }}" class="img-fluid" alt="Image 1">
+                         <div class="overlay-text ">
+                           <a href="{{ path('video4') }}">شاهد المزيد من الفيديوهات</a>                  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 position-relative">
+                  <div class="position-relative">
+                    <img src="{{ asset('images/site/site11.jpg') }}" class="img-fluid" alt="Image 1">
+                      <div class="overlay-text ">
+                        <a href="{{ path('video4') }}">شاهد المزيد من الفيديوهات</a>                  
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- First Column -->
+        <div class="col-md-6 text-right">
+            <h2>صور</h2>
+            <div class="row mt-4">
+                <div class="col-md-6 position-relative">
+                  <div class="position-relative">
+                    <img src="{{ asset('images/site/site26.jpg') }}" class="img-fluid" alt="Image 1">
+                      <div class="overlay-text ">
+                        <a href="{{ path('gallery4') }}">شاهد المزيد من الصور</a>                  
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-6 position-relative">
+                  <div class="position-relative">
+                    <img src="{{ asset('images/site/site9.jpg') }}" class="img-fluid" alt="Image 1">
+                      <div class="overlay-text ">
+                        <a href="{{ path('gallery4') }}">شاهد المزيد من الصور</a>                  
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+     <script>
+     $(document).ready(function(){
+    $('.img-container img').click(function(){
+      var $this = $(this);
+      if ($this.hasClass('expanded')) {
+        $this.removeClass('expanded');
+      } else {
+        $('.img-container img').removeClass('expanded');
+        $this.addClass('expanded');
+      }
+    });
+  });
+
+  
+  </script>
+{% endblock %}

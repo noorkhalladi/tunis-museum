@@ -1,0 +1,267 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <!-- Navigation Bar -->
+    <style>
+     body {
+        
+            min-height: 300vh;
+            position: relative;
+        
+       
+        
+    }
+    .content {
+            padding-bottom: 60px; /* Adjust this value based on your footer's height */
+            /* This padding ensures content doesn't get hidden under the fixed footer */
+        }
+     .custom-navbar {
+        background-color: rgba(136, 74, 57, 1); /* RGBA value: 0.5 sets the transparency level */
+         position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000; /* Ensure navbar appears on top of other elements */
+    }
+    .container {
+        margin-top: 20px; /* Adjust this value for the distance between navbar and content */
+    }
+    .custom-navbar .navbar-brand,
+    .custom-navbar .navbar-nav .nav-link {
+        color: #000; /* Text color for links and brand */
+    }
+    .sliding-background {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 50vh; /* Set the height to half of the viewport height */
+       
+    }
+     .carousel-item img {
+        height: 100vh; /* Adjust the height of the carousel as needed */
+        object-fit: cover;
+    }
+    .additional-row {
+        background-color: #C38154; /* Background color for the additional row */
+        padding: 40px 0; /* Adjust padding as needed */
+        text-align: right; /* Center align content */
+    }
+     .additional-row2 {
+        background-color: #F9E0BB; /* Background color for the additional row */
+        padding: 50px 0; /* Adjust padding as needed */
+        text-align: right; /* Center align content */
+    }
+     .card {
+        transition: transform 0.2s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .card-text {
+        margin-bottom: 20px;
+    }
+
+    .card-img-top {
+        object-fit: cover;
+        height: 200px; /* Adjust image height as needed */
+    }
+
+    .stretched-link {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+     .position-relative {
+        position: relative;
+        overflow: ;
+    }
+
+    .overlay-text {
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    .position-relative img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .position-relative:hover .overlay-text {
+        opacity: 1;
+    }
+    .custom-caption-2 {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
+    background-color: transparent;
+    padding: 200px;
+    border-radius: 5px;
+}
+.custom-caption-1 {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+}
+     .footer {
+        
+      
+       
+        background-color: rgba(136, 74, 57, 0.2);
+         position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 200px; /* Adjust this value based on your footer's height */
+           
+            /* Other styles for your footer */
+    }
+
+    .footer h5 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .footer p {
+        margin-bottom: 5px;
+    }
+     .quote {
+    color: #FFF7F1; /* Change this to the desired color */
+  }
+</style>
+
+
+   
+<div class="container-fluid">
+    <!-- Container to hold the additional row -->
+    <div class="row additional-row mb-4 mt-4">
+        <div class="col-md-12 ">
+            <h2>متاحف , معالم ومواقع اثرية</h2>
+            
+        </div>
+    </div>
+</div>
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="position-relative">
+                <img src="{{ asset('images/bardo/bardo.jpg') }}" class="img-fluid" alt="Image 1">
+                <div class="overlay-text">
+                    <h5>متاحف</h5>
+                    <p>اكتشفوا المتاحف التي تزخر بها تونس</p>
+                    <a href="{{ path('museums') }}">شاهد المزيد</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="position-relative">
+                <img src="{{ asset('images/milestone/milestone1.jpg') }}" class="img-fluid" alt="Image 2">
+                <div class="overlay-text">
+                    <h5>معالم</h5>
+                    <p>اكتشفوا المعالم  بتونس</p>
+                    <a href="{{ path('milestones') }}">شاهد المزيد</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="position-relative">
+                <img src="{{ asset('images/site/site13.jpg') }}" class="img-fluid" alt="Image 3">
+                <div class="overlay-text">
+                    <h5>مواقع اثرية</h5>
+                    <p>تعرفوا على المواقع الأثرية التي تزخر بها تونس</p>
+                    <a href="{{ path('sites') }}">شاهد المزيد</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- New Carousel with Bootstrap -->
+    <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#imageCarousel" data-slide-to="1"></li>
+            <li data-target="#imageCarousel" data-slide-to="2"></li>
+            
+            <!-- Add more indicators for additional images -->
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ asset('images/background/milestone1.jpg') }}" class="d-block w-100" alt="Image 3">
+                <div class="carousel-caption custom-caption-1">
+                     <h1 class="quote">  الآثار التاريخية هي أصول ثابتة    </h1>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('images/background/site1.jpg') }}" class="d-block w-100" alt="Image 4">
+                <div class="carousel-caption custom-caption-2 ">
+                <h1 class="quote"> المتاحف تثمين الماضي واستشراف للمستقبل    </h1>
+               
+                
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('images/background/site2.jpg') }}" class="d-block w-100" alt="Image 4">
+                <div class="carousel-caption custom-caption-2 ">
+                <h1 class="quote">تراثنا... ثروتنا التي لا تنضب </h1>
+                </div>
+            </div>
+           
+            <!-- Add more carousel items for additional images -->
+        </div>
+       
+    </div>
+   
+
+<div class="container-fluid">
+    <!-- Container to hold the additional row -->
+    <div class="row additional-row2 mb-4 mt-4">
+        <div class="col-md-12 ">
+<h4> الموقع الأثري هو مكان تتواجد فيهه الآثار القديمة التي تبين أن الموقع هو موقع تاريخي أو قبل التاريخ، وممكن أن تتواجد في هذه الأماكن سجلات أثرية تبين الأحداث التي وقعت في ذلك الزمان والمكان وعادةً ما تتواجد في هذه الأماكن مبان ومنشآت أثرية قديمة كمتحف باردو او متحف قرطاج </h4>     
+<h5> <a href="{{ path('article') }}"> اكتشفوا المزيد</a></h5>       
+        </div>
+    </div>
+</div>
+
+
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+
+<script>
+ 
+
+    $('.carousel').carousel({
+        interval: 2000 // Change slides every 3 seconds (3000 milliseconds)
+    });
+     $('.imageCarousel').carousel({
+        interval: 2000 // Change slides every 3 seconds (3000 milliseconds)
+    });
+    
+</script>
+
+{% endblock %}
+   

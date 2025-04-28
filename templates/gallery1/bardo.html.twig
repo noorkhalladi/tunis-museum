@@ -1,0 +1,488 @@
+{% extends 'base.html.twig' %}
+{% block head %}
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles.css">
+
+
+
+
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    
+
+
+
+{% endblock %}
+
+{% block body %}
+  <style>
+     body {
+        
+            min-height: 1960vh;
+            position: relative;
+         }
+    .modal-lg {
+    max-width: 100%;
+}
+.modal-dialog {
+  max-width: 90vw; /* Adjust the maximum width of the modal */
+  margin: 0 auto;
+  
+}
+.modal-content {
+  background-color: rgba(239, 188, 155, 0.4); /* Adjust the transparency by changing the last value (0.8) */
+  border: none; /* Optional: Remove border */
+  box-shadow: none; /* Optional: Remove box shadow */
+}
+
+.modal-body {
+  text-align: center;
+ padding: 0;
+}
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.1); /* Adjust the transparency by changing the last value (0.5) */
+}
+.modal-image {
+  max-width: 100%;
+  max-height: 80vh; /* Adjust the maximum height of the modal image */
+}
+
+.text-right {
+    direction: rtl;
+}
+
+.row {
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+.main-header {
+    background-color: #f0f0f0; /* Light gray background color */
+    padding: 20px;
+    border-bottom: 2px solid #ccc; /* Gray border at the bottom */
+}
+
+.content-row {
+    background-color: #e9ecef; /* Light gray background color */
+    padding: 20px;
+    border-bottom: 1px solid #ccc; /* Light gray border at the bottom */
+}
+    </style>
+     <div class="container mt-4"> <!-- Adjust top margin -->
+          <!-- Bootstrap Breadcrumb Row -->
+        <div class="row">
+            <div class="col-md-5 offset-md-8">
+                <nav aria-label="breadcrumb" style=" direction: rtl;  padding: 10px;">
+                    <ol class="breadcrumb" style="margin: 20; padding: 20; background-color: transparent;"> <!-- Remove background color -->
+                        <li class="breadcrumb-item"><a href="/"><i class="fas fa-home" style="color: #007bff;"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page" style="color: #6c757d;"> متحف باردو</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+
+</div>
+     <div class="container-fluid">
+        <div class="row text-right main-header">
+            <!-- Main Content -->
+            
+                <!-- Text content in Arabic -->
+                <h1> صور متحف باردو</h1>
+        </div>
+        <div class="row text-right content-row">
+                <p> 
+                <strong> المتحف الوطني بباردو  </strong> متحف تونسي يقع في مدينة باردو وهو يُعتبر ثاني متحف في العالم بالنسبة إلى فن الفسيفساء الرومانية بعد متحف فسيفساء زيوعما في تركيا. وهو من أهم المتاحف في حوض البحر الأبيض المتوسط وثاني متحف في القارة الأفريقية بعد المتحف المصري بالقاهرة  نظرا لثراء مقتنياته. يتبع تاريخ تونس  على مدى عدة آلاف من السنين وعبر العديد من الحضارات من خلال مجموعة واسعة من القطع الأثرية
+                </p>
+                <p>
+                تم افتتاح متحف باردو الوطني، الذي تم إنشاؤه بموجب مرسوم بيلي بتاريخ 7 نوفمبر 1882، في 7 ماي 1888 بحضور علي الثالث باي, تحتل جزءًا من القصر البايلي القديم في باردو. يحتوي على ما يقرب من 130 ألف قطعة موزعة على خمسة أقسام، ويتميز على وجه الخصوص بمجموعته من الفسيفساء التي تعد من أغنى المتاحف في العالم.
+وتشمل مجموعته آلاف اللوحات الفسيفسائية الرومانية التي يعود تاريخها من القرن الثاني قبل الميلاد الى ما بعد القرن السادس ميلادي.
+يضم متحف باردو العديد من الأجنحة والقاعات أهمها: قاعة سوسة, قاعة دقة, قاعة قرطاج الرومانية, قاعة الفسيفساء المسيحية, قاعة دقة, قاعة فيرجيل...
+
+                </p>
+            </div>
+
+
+
+ <div class="row">
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo5.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+          <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo6.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+          <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo7.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+          <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo8.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+       <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo9.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo10.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo11.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo12.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo13.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo14.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo21.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo23.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo24.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo25.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo27.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo28.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo32.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo34.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo36.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo37.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo38.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo40.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo41.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo43.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo45.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo46.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo47.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo48.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo49.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo52.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo54.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo55.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo56.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo60.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo61.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo62.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo65.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo67.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo68.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo69.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo70.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo73.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo74.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo76.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo77.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo78.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo79.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo81.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo89.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo90.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo91.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo92.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo93.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo94.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo99.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo100.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo37.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+         <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo1.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo2.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo3.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo4.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo4.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo15.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+      
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo17.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo18.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo19.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo20.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo22.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo26.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo29.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo30.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo31.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo33.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo39.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo42.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo44.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo50.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo51.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo53.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo57.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo58.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo63.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo64.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo66.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo71.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo80.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo82.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo83.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo84.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo85.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo86.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo87.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo88.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo95.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo96.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo97.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo72.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo98.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo101.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo16.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/bardo/bardo63.jpg') }}" alt="Image 1" class="img-thumbnail gallery-image">
+        </div>
+
+
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body modal-lg">
+        <img src="" class="img-fluid modal-image" alt="Modal Image">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">غلق</button>
+        <button type="button" class="btn btn-primary" id="prevBtn">السابق </button>
+        <button type="button" class="btn btn-primary" id="nextBtn">التالي </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+    var images = $(".gallery-image");
+    var currentIndex = 0;
+
+    images.click(function(){
+        var imageUrl = $(this).attr('src');
+        $('.modal-image').attr('src', imageUrl);
+        $('#imageModal').modal('show');
+        console.log
+        currentIndex = images.index($(this));
+    });
+
+    $('#prevBtn').click(function(){
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        var imageUrl = images.eq(currentIndex).attr('src');
+        $('.modal-image').attr('src', imageUrl);
+    });
+
+    $('#nextBtn').click(function(){
+        currentIndex = (currentIndex + 1) % images.length;
+        var imageUrl = images.eq(currentIndex).attr('src');
+        $('.modal-image').attr('src', imageUrl);
+    });
+});
+</script>
+
+{% endblock %}
